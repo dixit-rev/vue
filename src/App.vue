@@ -13,7 +13,7 @@
 // Imports
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import Ninjas from './components/Ninjas.vue';
+import Ninjas from './components/Main.vue';
 
 export default {
     components: {

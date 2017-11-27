@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   	<head>
+      	<meta charset="utf-8">
+      	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+      	<meta name="viewport" content="width=device-width, initial-scale=1">
+      	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      	<title>Bitflax Transaction</title>
+      	<!-- Bootstrap -->
+      	<link href="css/bootstrap.min.css" rel="stylesheet">
+      	<link rel="stylesheet" type="text/css" href="css/style.css">
+      	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+      	<link rel="shortcut icon" href="img/favicon.png">
+      	<script type="text/javascript" src=""></script>
+      	<script type="text/javascript" src="js/jquery.js"></script>
+   		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				// Floating Labels
+				//==============================================================
+				$('[data-toggle="floatLabel"]').attr('data-value', $(this).val()).on('keyup change', function() {
+					$(this).attr('data-value', $(this).val());
+				});
+			});
+		</script>
+</head>
+<body>
+
+	<div class="container-fluid counter_secnew">
+		<div class="container">
+			<div class="login-page">
+				<div class="logininner-page">
+					<div class="col-xs-12 col-sm-4 leftcolumn">
+						<div class="leftimage-main">
+							<div class="biltflaxheader">
+								<img src="img/logo-white.png" class="img-responsive">
+								<h4> It's free to join</h4>
+							</div>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-8 rightcolumn">
+						<div class="login_signuptabs">
+							<ul class="nav nav-tabs tabsnews">
+								<li class="active">
+									<a data-toggle="tab" href="#">Login </a>
+								</li>
+							</ul>
+							<div class="forminnerdealr">
+			 					<form id="ContForm" class="contact-form form-contact" novalidate="novalidate">		 					 
+			 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 email-field">					 							 
+			 							<div class="form-group">
+			 								<input id="emalid" name="emalid" placeholder="Email Id" class="form-control emailid" data-toggle="floatLabel" data-value="no-js">
+			 								<label for="emalid" style="">Email Id</label>
+			 							</div>						 											 							
+			 						</div>
+
+			 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 email-field">					 							 
+			 							<div class="form-group">
+			 								<input type="password" id="pwd" name="pwd" placeholder="Password" class="form-control pasword" data-toggle="floatLabel" data-value="no-js">
+			 								<label for="pwd" class="mat-label">Password</label>
+			 								<a class="forgot_links" href="#">Forgot Password?</a>
+			 							</div>						 											 							
+			 						</div>
+
+			 						<div class="col-md-12 col-sm-12 captcha-field">
+			 							<div class="form-group">
+			 								<div class="g-recaptcha" data-sitekey="6LduJTkUAAAAAOu12_PxXiStAmsbceHSULdH3EKJ"></div>
+			 							</div>
+			 						</div>
+
+			 						<div class="col-md-12 col-sm-12 resend_link">
+			 							<p><a href="#">Click Here</a> to resend your activation link</p>
+			 						</div>
+			 						 
+			 						<div class="botm_buttons">
+			 							<input type="submit" value="Login" class="dealersubmit" />
+			 						</div>
+
+			 						<div class="col-md-12 text-center">
+			 							<a class="forgot_links" href="#">Create an Account</a>
+			 						</div>
+			 					</form>
+			 				</div>
+					 	</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
