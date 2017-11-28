@@ -27,7 +27,7 @@ export default {
         this.ninjas.pop();
       }
     }
-}
+}   
 </script>
 <style scoped>
 #ninjas{

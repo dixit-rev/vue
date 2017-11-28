@@ -5,13 +5,13 @@
 </template>
 <script>
 export default {
-    props: {
+    props: {    
       title: {
         type: String,
         required: true
       }
     },
-    data(){
+    data(){  
         return{
 
         }
