@@ -1,19 +1,24 @@
 import Vue from 'vue'
-import App from './App.vue'
-import vueRouter from 'vue-router'
+import axios from 'axios';
+import App from './App.vue';
+import VueRouter from 'vue-router';
+import Routes from './routes.js'
 
+Vue.use(VueRouter);
 
-Vue.use(vueRouter);
-  //routings
-//   const router = new vueRouter({
-//     router  
-// });
-
-
-
+const router = new VueRouter({
+  routes: Routes,
+  mode: 'history'
+});
 new Vue({
   el: '#app',
-  vueRouter,
-  template: '<App/>',
-  components: { App }
+  router: router,
+  render: h => h(App)
+});
+console.log((localStorage, "mains s "));
+export const HTTP = axios.create({
+  baseURL: `http://35.177.76.135:36115/api`,
+  headers: {
+    // Authorization: userInfo.userAccessToken
+  }
 });

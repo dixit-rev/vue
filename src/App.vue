@@ -1,27 +1,37 @@
 <template>
   <div id="app" class="app">
-    <auth-layout v:title="dixit" v-if="isAuth"></auth-layout>
-    <!-- <layout v-else></layout> -->
+    <!--<auth-layout v-if="isAuth"></auth-layout>-->
+    <!--<auth-layout></auth-layout>-->
+      <router-view> </router-view>
   </div>
 </template>
 
 <script>
-//   import Layout from 'components/layout/Layout'
-  import AuthLayout from './components/layout/Abc'
-//   import VuesticPreLoader from './components/vuestic-components/vuestic-preloader/VuesticPreLoader.vue'
+  import authLayout from './components/auth/login/Login.vue';
+  //Dummy data
+  localStorage.setItem('bitflax:userAccessToken','lolobindatika');
+  localStorage.getItem('bitflax:userAccessToken');
+
+   global.userInfo={
+      isUserLogin:(localStorage.getItem('bitflax:userAccessToken'))?true:null,
+      userAccessToken:localStorage.getItem('bitflax:userAccessToken'),
+      AccountNo:null,
+      TwoFactor:null,
+      expires_in:null,
+      user_name:null,
+  };
 
   export default {
     name: 'app',
     components: {
-    //   VuesticPreLoader,
-      AuthLayout,
-    //   Layout
+        'auth-layout':authLayout,
     },
     computed: {
+
       isAuth () {
-          return true;
-        // return this.$route.path.match('auth')
+        return global.userInfo.isUserLogin;
       }
+
     }
   }
 </script>
