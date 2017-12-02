@@ -2,8 +2,11 @@ import Vue from 'vue'
 import axios from 'axios';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import Routes from './routes.js'
+import Routes from './routes.js';
+import VeeValidate from 'vee-validate';
 
+
+Vue.use(VeeValidate);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -15,7 +18,6 @@ new Vue({
   router: router,
   render: h => h(App)
 });
-console.log((localStorage, "mains s "));
 export const HTTP = axios.create({
   baseURL: `http://35.177.76.135:36115/api`,
   headers: {

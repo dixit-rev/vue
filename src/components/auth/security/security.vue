@@ -1,0 +1,517 @@
+<template>
+    <div class="container-fluid">
+        <div class="right-inner-content">
+            <div class="col-md-12">
+                <ul class="top-exchange-blocks">
+                    <li><span>BFX Wallet</span> BFX: 0.000000</li>
+                    <li><span>Lending Wallet</span>$ 0.00</li>
+                    <li class="buttons-list">
+                        <button class="btn btn-primary"><i class="fa fa-angle-right" aria-hidden="true"></i> Transfer <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </li>
+                    <li><span>Bitflax Wallet</span><i class="fa fa-university" aria-hidden="true"></i> 3.0000000</li>
+                    <li class="buttons-list">
+                        <button class="btn btn-primary"><i class="fa fa-angle-left" aria-hidden="true"></i> Exchange <i
+                                class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </li>
+                    <li><span>Bitcoin Wallet</span><i class="fa fa-bitcoin" aria-hidden="true"></i> 3.0000000</li>
+                </ul>
+            </div>
+            <div class="col-md-12 top-copy-link-block">
+                <form action="#" class="pull-left">
+                    <div class="input-group">
+                        <input class="ct-up" type="text" value="http://bitflax.devserver.co.in/">
+                        <button class="btn btn-orange" type="submit"><i class="fa fa-files-o" aria-hidden="true"></i>
+                            Copy
+                        </button>
+                    </div>
+                </form>
+                <button class="lending-guide-btn btn btn-primary pull-right"><i class="fa fa-building-o"
+                                                                                aria-hidden="true"></i> Lending Guide
+                </button>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12">
+                <div class="acc_security">
+                    <h2>Account Security</h2>
+                    <p>Your account security level is: <span class="highlight_txt">Low</span></p>
+                    <p>Weak account security increases the risk of Bitflax theft.</p>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar" style="width: 50%;">
+                            <span>50%</span>
+                        </div>
+                    </div>
+
+                    <div class="tabs-same-all">
+                        <div class="panel tabs panel-group">
+                            <div class="panel-heading">
+                                <!-- Tabs -->
+                                <ul class="nav panel-tabs">
+                                    <li class="active">
+                                        <a href="#tab1" data-toggle="tab">Two-Factor Authentication</a>
+                                    </li>
+                                    <!--<li>-->
+                                        <!--<a href="#tab2" data-toggle="tab">Code Card</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#tab3" data-toggle="tab">Login Shield</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#tab4" data-toggle="tab">Login History</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#tab5" data-toggle="tab">Change Password</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#tab6" data-toggle="tab">Login Notification</a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1">
+                                        <div class="inrtab_content">
+                                            <h2>Two-factor Authentication <span class="highlight_txt">Disable</span>
+                                            </h2>
+                                            <p>Protect your account in just few minutes by enabling following security
+                                                option.</p>
+                                            <p>Required when you send coin from main wallet(optional).</p>
+
+                                            <div class="panel-group" id="accordion" role="tablist"
+                                                 aria-multiselectable="true">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="headingOne">
+                                                        <h4 class="panel-title">
+                                                            <a class="" role="button" data-toggle="collapse"
+                                                               data-parent="#accordion" href="#collapseOne"
+                                                               aria-expanded="true" aria-controls="collapseOne">
+                                                                Enable mobile APP based two-factor authentication
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne" class="panel-collapse collapse in"
+                                                         role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="panel-body">
+                                                            <h2>Mobile APP based two-factor authentication</h2>
+                                                            <img class="img img-thumbnail pull-right" alt="/"
+                                                                 src="img/google-authenticator.jpg">
+                                                            <ol type="1.">
+                                                                <li>Download the "Google Authenticator" app for your
+                                                                    mobile phone or desktop computer: <a
+                                                                            href="">Android</a> or <a href="">iPhone</a>,
+                                                                    <a href="">iPad</a> and <a href="">iPod</a> , <a
+                                                                            href="">Windows Phone</a> , and <a href="">other
+                                                                        systems including Microsoft Windows desktop</a>.
+                                                                </li>
+                                                                <li>Write down this key <b>CL64O7Y4F3FEVUNL</b> on the
+                                                                    paper and store it safe. You will need it if you
+                                                                    lose or change your device.
+                                                                </li>
+                                                                <li>Install the "Google Authenticator" app. <b>Scan QR
+                                                                    barcode</b> revealed below with mobile app.
+                                                                </li>
+                                                                <li>Enter the Authentication code given by your mobile
+                                                                    app in the box.
+                                                                </li>
+                                                            </ol>
+                                                            <form>
+                                                                <img src="img/scancode.png" alt="/"
+                                                                     class="img-responsive">
+                                                                <div class="form-group">
+                                                                    <label>Authentication Key</label>
+                                                                    <input type="text" name="" value="CL64O7Y4F3FEVUNL"
+                                                                           class="form-control">
+                                                                </div>
+                                                                <div class="form-group aut_text">
+                                                                    <label>Authentication Code</label>
+                                                                    <input type="text" name="" value="0000"
+                                                                           class="form-control">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <a href="Print a backup of your recovery code."></a>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="checkbox">
+                                                                        <input id="checkbox1" type="checkbox">
+                                                                        <label for="checkbox1">
+                                                                            I have written down this backup code <b>CL64O7Y4F3FEVUNL</b>
+                                                                            on paper
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <input id="checkbox2" type="checkbox">
+                                                                        <label for="checkbox2">
+                                                                            Enable Google authentication while send coin
+                                                                            from wallet? (optional). This will ask
+                                                                            Google Authentication code each time when
+                                                                            you send coin to outside of bitflax wallet.
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <button class="btn btn-primary"><i
+                                                                            class="fa fa-check"></i>&nbsp;Enable
+                                                                    </button>
+                                                                </div>
+                                                                <div class="panel-blocks">
+                                                                    <h3>What is Google authenticator?</h3>
+                                                                    <ul>
+                                                                        <li>Google Authenticator protects your Bitflax
+                                                                            account from keyloggers and password theft.
+                                                                            With two-factor authentication, you'll need
+                                                                            both your password and an authentication
+                                                                            code to log in.
+                                                                        </li>
+                                                                        <li>Once you turn on Google Authentication,
+                                                                            you'll get a Authentication code to your
+                                                                            authenticator app every time you sign in on
+                                                                            a device.
+                                                                        </li>
+                                                                    </ul>
+                                                                    <img src="img/authenticator-security.png"
+                                                                         class="img-responsive" alt="/">
+
+                                                                    <h3>Why You Should Use Google Authenticator
+                                                                        App?</h3>
+                                                                    <ul>
+                                                                        <li>It Works without Internet and Network
+                                                                            coverage
+                                                                        </li>
+                                                                        <li>Manage Multiple Accounts in One Place</li>
+                                                                        <li>It takes only few minutes to set it up and
+                                                                            EASY to use
+                                                                        </li>
+                                                                        <li>You can use it without need of Google
+                                                                            account
+                                                                        </li>
+                                                                        <li>Protects your Bitflax account from
+                                                                            keyloggers and password theft.
+                                                                        </li>
+                                                                        <li>Adds a second layer of security to prevent
+                                                                            unauthorized login access.
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab2">
+                                        <div class="inrtab_content">
+                                            <h2>Code card <span class="highlight_txt">Disable</span></h2>
+                                            <p>Secure your coin wallet with code card.</p>
+                                            <p>Enable Code card based wallet security</p>
+                                            <button class="btn btn-primary"><i class="fa fa-check"></i>&nbsp;Get code
+                                                card
+                                            </button>
+
+                                            <div class="panel-blocks">
+                                                <h3>What is code card?</h3>
+                                                <ul>
+                                                    <li>Having enabled this option you will have code card with numeric
+                                                        code list to store offline. When you send or withdraw coin from
+                                                        main wallet, the bitflax system will ask random number code from
+                                                        that card.
+                                                    </li>
+                                                    <li>Code card transaction security is a convenient and reliable
+                                                        protection measure for wallet security that has shown itself in
+                                                        the majority of leading financial institutions of the world.
+                                                    </li>
+                                                </ul>
+                                                <img src="img/card-security.png" class="img-responsive" alt="/">
+
+                                                <h3>Why You Should Use Code card authentication?</h3>
+                                                <ul>
+                                                    <li>Secure your coin wallet from unauthorized transactions</li>
+                                                    <li>Enhanced protection from Internet hackers</li>
+                                                    <li>Can be obtained and printed directly from Code card security
+                                                        page
+                                                    </li>
+                                                    <li>Add an extra layer of security to main Bitflax wallet</li>
+                                                    <li>Enhanced protection from Internet hackers</li>
+                                                    <li>Available to users who do not have their permanent device in
+                                                        their possession
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab3">
+                                        <div class="inrtab_content">
+                                            <h2>Login shield <span class="highlight_txt">Enable</span></h2>
+                                            <p>Prevent login from unauthorized Browsers/Device.</p>
+                                            <div class="panel-group" id="accordion" role="tablist"
+                                                 aria-multiselectable="true">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="headingOne">
+                                                        <h4 class="panel-title">
+                                                            <a class="" role="button" data-toggle="collapse"
+                                                               data-parent="#accordion" href="#collapseTwo"
+                                                               aria-expanded="true" aria-controls="collapseTwo">
+                                                                Show/Remove authorized Browsers/Device
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseTwo" class="panel-collapse collapse in"
+                                                         role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="panel-body">
+                                                            <div class="table-responsive in-table-bit">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <th>Date</th>
+                                                                        <th>User Agent</th>
+                                                                        <th>Browser/Device</th>
+                                                                        <th>Location</th>
+                                                                        <th>IP Address</th>
+                                                                        <th>Remove</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody></tbody>
+                                                                </table>
+                                                                <p>No verified browser/device available</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab4">
+                                        <div class="inrtab_content">
+                                            <h2>Login History</h2>
+                                            <span class="select-label">
+                                    Show
+                                    <select>
+                                       <option>10</option>
+                                       <option>25</option>
+                                       <option>40</option>
+                                       <option>100</option>
+                                    </select>
+                                    entries
+                                 </span>
+                                            <div class="panel-group" id="accordion" role="tablist"
+                                                 aria-multiselectable="true">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="headingOne">
+                                                        <h4 class="panel-title">
+                                                            <a class="" role="button" data-toggle="collapse"
+                                                               data-parent="#accordion" href="#collapseThree"
+                                                               aria-expanded="true" aria-controls="collapseThree">
+                                                                Login History
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseThree" class="panel-collapse collapse in"
+                                                         role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="panel-body">
+                                                            <div class="table-responsive in-table-bit">
+                                                                <table>
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <th>Date</th>
+                                                                        <th>User Agent</th>
+                                                                        <th>Browser/Device</th>
+                                                                        <th>Location</th>
+                                                                        <th>IP Address</th>
+                                                                        <th>Remove</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td>2017-11-17 03:04:39 PM</td>
+                                                                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64;
+                                                                            rv:57.0) Gecko/20100101 Firefox/57.0
+                                                                        </td>
+                                                                        <td>Firefox</td>
+                                                                        <td>IN</td>
+                                                                        <td>223.196.73.212</td>
+                                                                        <td><span class="fa fa-trash"></span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2017-11-17 03:04:39 PM</td>
+                                                                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64;
+                                                                            rv:57.0) Gecko/20100101 Firefox/57.0
+                                                                        </td>
+                                                                        <td>Firefox</td>
+                                                                        <td>IN</td>
+                                                                        <td>223.196.73.212</td>
+                                                                        <td><span class="fa fa-trash"></span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2017-11-17 03:04:39 PM</td>
+                                                                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64;
+                                                                            rv:57.0) Gecko/20100101 Firefox/57.0
+                                                                        </td>
+                                                                        <td>Firefox</td>
+                                                                        <td>IN</td>
+                                                                        <td>223.196.73.212</td>
+                                                                        <td><span class="fa fa-trash"></span></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="pagination">
+                                                                <nav aria-label="Page navigation">
+                                                                    <ul class="pagination">
+                                                                        <li>
+                                                                            <a href="#" aria-label="Previous">
+                                                                                <span aria-hidden="true">«</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li><a href="#">1</a></li>
+                                                                        <li><a href="#">2</a></li>
+                                                                        <li><a href="#">3</a></li>
+                                                                        <li><a href="#">4</a></li>
+                                                                        <li><a href="#">5</a></li>
+                                                                        <li>
+                                                                            <a href="#" aria-label="Next">
+                                                                                <span aria-hidden="true">»</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab5">
+                                        <div class="inrtab_content">
+                                            <h2>Change Password</h2>
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="password" id="old-pwd" class="form-control password"
+                                                           data-toggle="floatLabel" placeholder="Old Password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" id="new-pwd" class="form-control password"
+                                                           data-toggle="floatLabel" placeholder="New Password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" id="con-pwd" class="form-control password"
+                                                           data-toggle="floatLabel" placeholder="Confirm New Password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="g-recaptcha"
+                                                         data-sitekey="6LduJTkUAAAAAOu12_PxXiStAmsbceHSULdH3EKJ">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button class="btn btn-primary">Change</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="tab6">
+                                        <div class="inrtab_content">
+                                            <h2>Login notification <span class="highlight_txt">Disable</span></h2>
+                                            <button class="btn btn-primary"><i class="fa fa-check"></i>Enable</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guidelines">
+                        <h4>Bitflax Account Security Guidelines.</h4>
+                        <p>Bitflax aims to create maximum safety for each member. We want you to be careful and not
+                            allow the scammers to steal your data, so we have created detailed instructions on how to
+                            protect yourself from possible threats.</p>
+                        <h4>Dear members!</h4>
+                        <ul>
+                            <li>Be aware of any hacker activities! For your own security keep your firewall and
+                                Anti-Virus program working, watch out for key-loggers, spoofed website, and the URL in
+                                address line should always be <a href="#">Bitflax.com</a></li>
+                            <li>Keep in mind, Bitflax never ask you to send your password or access code by e-mail and
+                                doesn't offer anything other then published on website.
+                            </li>
+                            <li>Don't visit suspicious websites or download unknown programs even if they offer to
+                                reinforce the protection of your computer. Such programs may contain malware, adware,
+                                viruses, exploits, bots.
+                            </li>
+                            <li>We recommand you to use strong and unique password for Bitflax account. Do not use the
+                                same password for other online services.
+                            </li>
+                            <li>Attacker attempts to hack your E-mail in order to get access to your Bitflax account
+                                using the password recovery procedure. Make sure you set maximum security for your Email
+                                account.
+                            </li>
+                            <li>If you failed to protect yourself and the scammer hacked your account - do not panic.
+                            </li>
+                            <li>Check whether you still have access to the Bitflax account. If so, write to the support
+                                service immediately. Bitflax will temporarily stop operations using your Bitflax
+                                account, so that the scammer couldn't withdraw money.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</template>
+
+
+<script>
+    import {HTTP} from '../../../main.js';
+    HTTP.get(`Security/getgoogleauth`,
+    ).then(function (response) {
+        console.log(response,"response");
+    });
+    export default {
+
+        name: 'security',
+        data() {
+            return {
+                code: ''
+            }
+            // HTTP.get(`Security/getgoogleauth`,
+            // ).then(function (response) {
+            //     console.log(response,"response");
+            // });
+
+        },
+        methods: {
+            validateBeforeSubmit() {
+                this.$validator.validateAll().then((result) => {
+                    console.log(result, "result");
+                    if (result) {
+                        ///Security/getgoogleauth
+                        //     HTTP.get(`Security/getgoogleauth`,
+                        //         // {
+                        //         //     "code": this.email,//"admin@bfx.api.com",
+                        //         //     "Password": this.password//"Bitflax@123"
+                        //         // }
+                        //     )
+                        //         .then(response => {
+                        //             userInfo['userAccessToken'] = response.data.value.access_token;
+                        //             userInfo['AccountNo'] = response.data.value.AccountNo;
+                        //             userInfo['TwoFactor'] = response.data.value.TwoFactor;
+                        //             userInfo['user_name'] = response.data.value.user_name;
+                        //             userInfo['expires_in'] = response.data.value.expires_in;
+                        //         })
+                        //         .catch(e => {
+                        //             this.errors.push(e)
+                        //         });
+                    }
+                });
+            }
+        }
+    }
+</script>

@@ -1,11 +1,15 @@
 import login from './components/auth/login/Login.vue';
 import signUp from './components/auth/signup/Signup.vue';
+import twoFactor from './components/auth/login/TwoFactor.vue';
+import security from './components/auth/security/security.vue';
+import dashboard from './components/auth/dashboard/dashboard.vue';
 import app from './App.vue';
-console.log(global.userInfo.userAccessToken);
+
+var homePage = (global.userInfo.userAccessToken) ? dashboard : login;
 export default [
     {
         path: '/',
-        component: app
+        component: homePage
     },
     {
         path: '/login',
@@ -14,5 +18,13 @@ export default [
     {
         path: '/signup',
         component: signUp
+    },
+    {
+        path: '/twofactor',
+        component: twoFactor
+    },
+    {
+        path: '/security',
+        component: security
     },
 ];

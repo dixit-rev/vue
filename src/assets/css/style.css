@@ -1315,7 +1315,7 @@ div.navigationbar nav.navbar-inverse.navbar {
     box-shadow: 0 0 0 0;
     padding: 0;
 }
-.login-page .form-group .form-control:focus {
+.login-page .form-group .form-control:focus:not(.input.is-danger) {
     border-color: #ba652a;
 }
 .login-page .form-group [data-toggle="floatLabel"] {
@@ -1361,7 +1361,7 @@ div.navigationbar nav.navbar-inverse.navbar {
 .forgot_links {
     color: #f27722;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 30px;
     display: inline-block;
 }
 .forgot_links:hover, 
@@ -1540,3 +1540,23 @@ a.text-remove-center{
     margin: 7px 5px;
   }
 }
+
+
+/*Custom css by Dextor */
+
+input.input.is-danger:focus, .textarea.is-danger:focus {
+    outline:none;
+}
+input.input.is-danger, .textarea.is-danger {
+    border-color: #ff3860;
+}
+.help.is-danger {
+    color: #ff3860;
+    position: absolute;
+}
+.help {
+     display: block;
+     font-size: 11px;
+     margin-top: 5px;
+ }
+

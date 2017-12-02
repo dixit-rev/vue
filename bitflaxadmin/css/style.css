@@ -1429,6 +1429,42 @@ a.text-remove-center{
   z-index: 99999;
 }
 
+/***/
+.ico-section{
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 5px #656565;
+  border-radius: 4px;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+.ico-section table tr td{
+  text-align: left;
+}
+.modal-ico h3{
+  text-align: center;
+  background: #333;
+  padding: 10px 2px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+a.sh-qr{
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+}
+.fees-details p{
+  width: 100%;
+  display: block;
+}
+.fees-details p span{
+  float: right;
+  font-weight: bold;
+}
+
 @media(max-width: 992px){
 	.inrtab_content .text-right{
 		text-align: center;

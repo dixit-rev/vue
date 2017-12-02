@@ -23,24 +23,31 @@
                                 </li>
                             </ul>
                             <div class="forminnerdealr">
-                                <form id="ContForm" class="contact-form form-contact" novalidate="novalidate"
-                                      v-on:submit="submitForm">
+                                <form id="ContForm" class="contact-form form-contact"
+                                      novalidate="novalidate" @submit.prevent="validateBeforeSubmit">
+
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 email-field">
-                                        <div class="form-group">
-                                            <input id="emalid" v-model="email" name="emalid" placeholder="Email Id"
-                                                   class="form-control emailid" data-toggle="floatLabel"
+                                        <div class="form-group control">
+                                            <input id="userName" v-validate="'required'"
+                                                   :class="{'input': true, 'is-danger': errors.has('user name') }"
+                                                   v-model="userName" name="user name" placeholder="User Name"
+                                                   class="form-control" data-toggle="floatLabel"
                                                    data-value="no-js">
-                                            <label for="emalid" style="">Email Id</label>
+                                            <label for="userName">User Name</label>
+                                            <span v-show="errors.has('user name')" class="help is-danger">{{ errors.first('user name') }}</span>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 email-field">
                                         <div class="form-group">
-                                            <input type="password" v-model="password" id="pwd" name="pwd"
+                                            <input type="password" v-model="password" id="password" name="password"
                                                    placeholder="Password"
+                                                   v-validate="'required'"
+                                                   :class="{'input': true, 'is-danger': errors.has('password') }"
                                                    class="form-control pasword" data-toggle="floatLabel"
                                                    data-value="no-js">
-                                            <label for="pwd" class="mat-label">Password</label>
+                                            <label for="password" class="mat-label">Password</label>
+                                            <span v-show="errors.has('password')" class="help is-danger">{{ errors.first('password') }}</span>
                                             <a class="forgot_links" href="#">Forgot Password?</a>
                                         </div>
                                     </div>
@@ -57,8 +64,9 @@
                                     </div>
 
                                     <div class="botm_buttons">
-                                        <input type="submit" value="Login" v-on:click="submitForm"
+                                        <input type="submit" value="Login"
                                                class="dealersubmit"/>
+                                        <!--v-on:click="submitForm"-->
                                     </div>
 
                                     <div class="col-md-12 text-center">
@@ -66,6 +74,7 @@
                                             <router-link to="/signup">Create an Account</router-link>
                                         </a>
                                     </div>
+
                                 </form>
                             </div>
                         </div>
@@ -83,28 +92,56 @@
         name: 'login',
         data() {
             return {
-                email: '',
+                userName: '',
                 password: ''
             }
         },
         methods: {
-            submitForm: function () {
-                HTTP.post(`Account/signin`,
-                    {
-                        "UserName": this.email,//"admin@bfx.api.com",
-                        "Password": this.password//"Bitflax@123"
+            validateBeforeSubmit() {
+
+                // console.log(this.$router.go('/'));
+                this.$validator.validateAll().then((result) => {
+                    console.log(result, "result");
+                    var self = this;
+                    if (result) {
+                        $.get("http://api.ipify.org/?format=json", function (data) {
+                            console.log(data.ip, "data");
+                            HTTP.post(`Account/signin`,
+                                {
+                                    "UserName": self.userName,//"admin@bfx.api.com",
+                                    "Password": self.password,//"Bitflax@123",
+                                    "MacAddress": "22-22-22-22-22-22",
+                                    "IpAddress": data.ip,
+                                    "Browser": navigator.appName,
+                                    "UserAgent": navigator.userAgent,
+                                    "Location": "IN"
+                                }
+                            )
+                                .then(response => {
+                                    localStorage.setItem('bitflax:userAccessToken', response.data.value.access_token);
+                                    global.userInfo['userAccessToken'] = response.data.value.access_token;
+                                    global.userInfo['AccountNo'] = response.data.value.AccountNo;
+                                    global.userInfo['TwoFactor'] = response.data.value.TwoFactor;
+                                    global.userInfo['user_name'] = response.data.value.user_name;
+                                    global.userInfo['expires_in'] = response.data.value.expires_in;
+                                    if (response.data.value.TwoFactor) {
+                                        setTimeout(function () {
+                                            self.$router.go('/twofactor');
+                                        }, 1000);
+                                    } else {
+                                        setTimeout(function () {
+                                            self.$router.go('/');
+                                        }, 1000);
+                                    }
+
+                                })
+                                .catch(e => {
+                                    this.errors.push(e)
+                                });
+                        });
+                        return;
                     }
-                )
-                    .then(response => {
-                        userInfo['userAccessToken'] = response.data.value.access_token;
-                        userInfo['AccountNo'] = response.data.value.AccountNo;
-                        userInfo['TwoFactor'] = response.data.value.TwoFactor;
-                        userInfo['user_name'] = response.data.value.user_name;
-                        userInfo['expires_in'] = response.data.value.expires_in;
-                    })
-                    .catch(e => {
-                        this.errors.push(e)
-                    })
+                });
             }
         }
     }
